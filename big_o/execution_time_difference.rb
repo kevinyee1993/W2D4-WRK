@@ -49,9 +49,16 @@ def better(list)
   #if all negative, then return list.max
 
   list.each do |el|
-    if el > 0
+    #running_sum += el
+
+    # if running_sum > largest_sum
+    #   largest_sum = running_sum
+    #   running_sum = 0
+    # end
+
+    #if el > 0
       running_sum += el
-    else
+    if running_sum + el < 0
       largest_sum = running_sum if running_sum > sum
       running_sum = 0
     end
